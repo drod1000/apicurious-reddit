@@ -1,3 +1,3 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :reddit, "ynrkyFVZ-Gm4SQ", "	aORc_ep3s3nETsbgeHO2Tn3yVbI", scope: 'identity'
+  provider :reddit, "ynrkyFVZ-Gm4SQ", "aORc_ep3s3nETsbgeHO2Tn3yVbI", scope: 'identity', duration: 'temporary'
 end
