@@ -42,4 +42,35 @@ RSpec.describe User, :type => :model do
       expect(user).to be_valid
     end
   end
+
+  describe "methods" do
+    it "can return user that already exists" do
+      existing_user = User.create(name: "some_name", uid: "some_uid", token: "some_token")
+      auth_hash = {}
+      auth_hash["uid"] = "some_uid"
+      auth_hash["info"] = {"name" => "some_name"}
+      auth_hash["credentials"] = {"token" => "some_token"}
+
+      user = User.from_omniauth(auth_hash)
+
+      expect(user).to be_a(User)
+      expect(user.name).to_be equal_to("some_name")
+      expect(user.uid).to_be equal_to("some_uid")
+      expect(user.token).to_be equal_to("some_token")
+    end
+
+    it "can create a user and return it" do
+      auth_hash = {}
+      auth_hash["uid"] = "some_uid"
+      auth_hash["info"] = {"name" => "some_name"}
+      auth_hash["credentials"] = {"token" => "some_token"}
+
+      user = User.from_omniauth(auth_hash)
+
+      expect(user).to be_a(User)
+      expect(user.name).to_be equal_to("some_name")
+      expect(user.uid).to_be equal_to("some_uid")
+      expect(user.token).to_be equal_to("some_token")
+    end
+  end
 end
