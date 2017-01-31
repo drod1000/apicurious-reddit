@@ -54,9 +54,9 @@ RSpec.describe User, :type => :model do
       user = User.from_omniauth(auth_hash)
 
       expect(user).to be_a(User)
-      expect(user.name).to_be equal_to("some_name")
-      expect(user.uid).to_be equal_to("some_uid")
-      expect(user.token).to_be equal_to("some_token")
+      expect(user.name).to eq("some_name")
+      expect(user.uid).to eq("some_uid")
+      expect(user.token).to eq("some_token")
     end
 
     it "can create a user and return it" do
@@ -68,9 +68,9 @@ RSpec.describe User, :type => :model do
       user = User.from_omniauth(auth_hash)
 
       expect(user).to be_a(User)
-      expect(user.name).to_be equal_to("some_name")
-      expect(user.uid).to_be equal_to("some_uid")
-      expect(user.token).to_be equal_to("some_token")
+      expect(user.name).to eq("some_name")
+      expect(user.uid).to eq("some_uid")
+      expect(user.token).to eq("some_token")
     end
   end
 end
