@@ -1,8 +1,12 @@
 class SessionsController < ApplicationController
   def create
-    name = auth_hash["info"]["name"]
-    uid = auth_hash["uid"]
-    token = auth_hash["credentials"]["token"]
+    @user = User.from_omniauth(auth_hash)
+    if @user
+      session[:user_id] = @user.id
+      redirect_to dashboard_path
+    else
+      redirect_to root_path
+    end
   end
 
   protected

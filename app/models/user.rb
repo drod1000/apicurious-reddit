@@ -5,6 +5,7 @@ class User < ApplicationRecord
   def self.from_omniauth(auth_hash)
     user = User.find_by(uid: auth_hash["uid"])
     if user
+      user.token = auth_hash["credentials"]["token"]
       return user
     else
       name = auth_hash["info"]["name"]
