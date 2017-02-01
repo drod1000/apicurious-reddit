@@ -9,10 +9,18 @@ class RedditService
 
   def self.get_user_subreddits(token)
     conn = Faraday.new
-    raw_data = conn.get 'https://oauth.reddit.com//subreddits/mine/subscriber' do |req|
+    raw_data = conn.get 'https://oauth.reddit.com/subreddits/mine/subscriber' do |req|
       req.headers[:Authorization] = "bearer #{token}"
     end
     JSON.parse(raw_data.body, symbolize_names: true)[:data][:children]
+  end
+
+  def self.get_subreddit_rules(token, name)
+    conn = Faraday.new
+    raw_data = conn.get "https://oauth.reddit.com/r/#{name}/about/rules" do |req|
+      req.headers[:Authorization] = "bearer #{token}"
+    end
+    JSON.parse(raw_data.body, symbolize_names: true)[:rules]
   end
 
 end

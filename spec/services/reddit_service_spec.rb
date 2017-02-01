@@ -18,6 +18,7 @@ describe RedditService do
     it "returns subreddits for current user" do
       VCR.use_cassette("user_subreddits") do
         subreddits = RedditService.get_user_subreddits(User.first.token)
+
         expect(subreddits).to be_an(Array)
 
         subreddit = subreddits.first
@@ -29,6 +30,22 @@ describe RedditService do
 
         expect(subreddit_data).to have_key(:display_name)
         expect(subreddit_data).to have_key(:url)
+      end
+    end
+  end
+
+  context ".get_subreddit_rules" do
+    it "returns rules for a subreddit" do
+      VCR.use_cassette("subreddit_rules") do
+        rules = RedditService.get_subreddit_rules(User.first.token, "worldnews")
+
+        expect(rules).to be_an(Array)
+
+        rule = rules.first
+
+        expect(rule).to be_a(Hash)
+        expect(rule).to have_key(:description)
+        binding.pry
       end
     end
   end
