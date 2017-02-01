@@ -6,6 +6,5 @@ class DashboardController < ApplicationController
     end
     response = JSON.parse(raw_data.body, symbolize_names: true)
     @user = RedditUser.new(response)
-    binding.pry
   end
 end
