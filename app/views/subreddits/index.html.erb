@@ -1,0 +1,5 @@
+<h1>My Subreddits<h1>
+  <% @subreddits.each do |subreddit| %>
+    Name : <%= subreddit.name %></br>
+    URL : <%= subreddit.url %></br>
+  <% end %>
