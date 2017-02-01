@@ -12,7 +12,7 @@ class RedditService
     raw_data = conn.get 'https://oauth.reddit.com//subreddits/mine/subscriber' do |req|
       req.headers[:Authorization] = "bearer #{token}"
     end
-    JSON.parse(raw_data.body, symbolize_names: true)
+    JSON.parse(raw_data.body, symbolize_names: true)[:data][:children]
   end
 
 end
