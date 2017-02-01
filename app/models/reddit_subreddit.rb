@@ -3,7 +3,7 @@ class RedditSubreddit
 
   def initialize(attrs = {})
     @name = attrs[:data][:display_name]
-    @url = attrs[:data][:url]
+    @url = "https://www.reddit.com#{attrs[:data][:url]} "
   end
 
   def self.get_user_subreddits(token)
