@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'pry'
+gem 'faraday'
 gem 'figaro'
 
 # Reddit OAuth
@@ -49,6 +50,8 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'launchy'
   gem 'database_cleaner'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do
