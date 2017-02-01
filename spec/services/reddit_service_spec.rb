@@ -45,7 +45,6 @@ describe RedditService do
 
         expect(rule).to be_a(Hash)
         expect(rule).to have_key(:description)
-        binding.pry
       end
     end
   end

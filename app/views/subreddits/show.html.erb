@@ -1,0 +1,6 @@
+<%= @subreddit.name %>
+<ul>
+<% @subreddit.rules.each do |rule| %>
+  <li><%= rule %></li></br>
+<% end %>
+</ul>
