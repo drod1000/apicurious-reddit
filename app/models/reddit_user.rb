@@ -6,4 +6,8 @@ class RedditUser
     @link_karma = attrs[:link_karma]
     @comment_karma = attrs[:comment_karma]
   end
+
+  def self.get_user_info(token)
+    new(RedditService.get_user_info(token))
+  end
 end
