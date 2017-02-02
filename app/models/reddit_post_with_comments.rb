@@ -10,4 +10,9 @@ class RedditPostWithComments
     end
   end
 
+  def self.get_single_subreddit_post(token, name)
+    json = RedditService.get_single_subreddit_post(token, name)
+    RedditPostWithComments.new(token, json)
+  end
+
 end
