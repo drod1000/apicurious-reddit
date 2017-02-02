@@ -1,5 +1,5 @@
 <div class="container" >
-  <h1><%= @post_with_comments.title %></h1>
-  <%= @post_with_comments.body %>
-  <%= render partial: "posts/comments", locals: {comments: @post_with_comments.comments} %>
+  <h1><%= @post.title %></h1>
+  <%= @post.body %>
+  <%= render partial: "posts/comments", locals: {comments: @post.comments} %>
 </div>
