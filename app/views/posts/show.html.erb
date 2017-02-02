@@ -1,0 +1,3 @@
+<h1><%= @post_with_comments.title %></h1>
+<%= @post_with_comments.body %></br>
+<%= render partial: "posts/comments", locals: {comments: @post_with_comments.comments} %>
