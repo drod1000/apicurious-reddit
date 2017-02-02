@@ -2,7 +2,7 @@
   <h1>My Subreddits</h1>
     <ul>
     <% @subreddits.each do |subreddit| %>
-      <li><%= link_to "#{subreddit.name}", subreddit_path(subreddit.url) %></li>
+      <li><%= link_to subreddit.name, subreddit_path(subreddit.url) %></li>
     <% end %>
     </ul>
 </div>
