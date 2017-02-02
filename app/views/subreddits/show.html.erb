@@ -1,1 +1,2 @@
-<%= @subreddit.name %>
+<h1><%= @subreddit.name %></h1>
+<%= render partial: "subreddits/posts", locals: {posts: @subreddit.posts} %>
