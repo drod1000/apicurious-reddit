@@ -1,4 +1,5 @@
 <div class="container">
   <h1><%= @subreddit.name %></h1>
+  <%= render partial: "subreddits/rules", locals: {rules: @subreddit.rules} %>
   <%= render partial: "subreddits/posts", locals: {posts: @subreddit.posts} %>
 </div>
