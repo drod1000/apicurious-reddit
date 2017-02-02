@@ -5,7 +5,7 @@ class SubredditsController < ApplicationController
 
   def show
     @json = RedditService.get_single_subreddit(current_user.token, params[:permalink])
-    @subreddit = SubredditWithPosts.new(params[:permalink], @json)
+    @subreddit = SubredditWithPosts.new(current_user.token, @json)
   end
 
 end
