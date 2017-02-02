@@ -1,7 +1,2 @@
-<%= @subreddit.name %>
-<%= render :partial => '/subreddits/posts' %>
-<ul>
-<% @subreddit.rules.each do |rule| %>
-  <li><%= rule %></li></br>
-<% end %>
-</ul>
+<h1><%= @subreddit.name %></h1>
+<%= render partial: "subreddits/posts", locals: {posts: @subreddit.posts} %>

@@ -15,11 +15,4 @@ class RedditSubreddit
     end
   end
 
-  def self.get_single_subreddit(token, name)
-    match = RedditService.get_user_subreddits(token).find do |subreddit|
-      subreddit[:data][:display_name] == name
-    end
-    RedditSubreddit.new(token, match)
-  end
-
 end
