@@ -5,12 +5,10 @@ class SubredditsController < ApplicationController
 
   def show
     @subreddit = RedditSubreddit.get_single_subreddit(current_user.token, params[:name])
+    @posts = RedditPost.get_subreddit_posts(current_user.token, params[:name])
   end
 
   def posts
-    @json = RedditService.get_subreddit_posts(current_user.token, params[:name])
-    @posts = @json.map do |post|
-      RedditPost.new(current_user.token, post)
-    end
+    @posts = RedditPost.get_subreddit_posts(current_user.token, params[:name])
   end
 end
