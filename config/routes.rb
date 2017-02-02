@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   get '/auth/reddit/callback', to: 'sessions#create'
   get '/dashboard', to: 'dashboard#show', as: :dashboard
   get '/my_subreddits', to: 'subreddits#index', as: :subreddits
-  get '/subreddit/:name', to: 'subreddits#show', as: :subreddit
+  get '/subreddits/*permalink', to: 'subreddits#show', as: :subreddit
   get '/posts/*permalink', to: 'posts#show', as: :post
 end

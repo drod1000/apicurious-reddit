@@ -4,8 +4,19 @@ class SubredditsController < ApplicationController
   end
 
   def show
-    @subreddit = RedditSubreddit.get_single_subreddit(current_user.token, params[:name])
-    @posts = RedditPost.get_subreddit_posts(current_user.token, params[:name])
+    @json = RedditService.get_single_subreddit(current_user.token, params[:permalink])
+    @subreddit = SubredditWithPosts.new(params[:permalink], @json)
   end
 
+end
+
+class SubredditWithPosts
+  attr_reader :name
+  def initialize(name, attrs)
+    @name = attrs[0][:data][:subreddit]
+
+    @posts = attrs.map do |post|
+      RedditPost.new(post)
+    end
+  end
 end
