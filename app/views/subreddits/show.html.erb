@@ -1,4 +1,5 @@
 <%= @subreddit.name %>
+<%= render :partial => '/subreddits/posts' %>
 <ul>
 <% @subreddit.rules.each do |rule| %>
   <li><%= rule %></li></br>

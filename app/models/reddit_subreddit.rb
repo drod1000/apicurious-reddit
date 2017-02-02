@@ -1,5 +1,5 @@
 class RedditSubreddit
-  attr_reader :name, :url, :rules
+  attr_reader :name, :url, :rules, :posts
 
   def initialize(token, attrs = {})
     @name = attrs[:data][:display_name]
@@ -21,4 +21,5 @@ class RedditSubreddit
     end
     RedditSubreddit.new(token, match)
   end
+
 end
