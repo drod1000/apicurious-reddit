@@ -8,7 +8,4 @@ class SubredditsController < ApplicationController
     @posts = RedditPost.get_subreddit_posts(current_user.token, params[:name])
   end
 
-  def posts
-    @posts = RedditPost.get_subreddit_posts(current_user.token, params[:name])
-  end
 end
