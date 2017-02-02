@@ -3,7 +3,7 @@ class RedditSubreddit
 
   def initialize(token, attrs = {})
     @name = attrs[:data][:display_name]
-    @url = "https://www.reddit.com#{attrs[:data][:url]}"
+    @url = attrs[:data][:url]
     @rules = RedditService.get_subreddit_rules(token, @name).map do |rule|
       rule[:description]
     end
