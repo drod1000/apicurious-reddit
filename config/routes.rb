@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'dashboard#show', as: :dashboard
   get '/my_subreddits', to: 'subreddits#index', as: :subreddits
   get '/subreddit/:name', to: 'subreddits#show', as: :subreddit
+  get '/posts/:name', to: 'subreddits#posts', as: :posts
 end

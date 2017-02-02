@@ -23,4 +23,12 @@ class RedditService
     JSON.parse(raw_data.body, symbolize_names: true)[:rules]
   end
 
+  def self.get_subreddit_posts(token, name)
+    conn = Faraday.new
+    raw_data = conn.get "https://oauth.reddit.com/r/personalfinance?type=t3&limit=15" do |req|
+      req.headers[:Authorization] = "bearer #{token}"
+    end
+    JSON.parse(raw_data.body, symbolize_names: true)[:data][:children]
+  end
+
 end
