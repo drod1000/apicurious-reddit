@@ -6,7 +6,7 @@ class RedditSubredditWithPosts
     @posts = attrs.map do |post|
       RedditPost.new(post)
     end
-    @rules = RedditService.get_subreddit_rules(token, @name).map do |rule|
+    @rules ||= RedditService.get_subreddit_rules(token, @name).map do |rule|
       rule[:description]
     end
   end

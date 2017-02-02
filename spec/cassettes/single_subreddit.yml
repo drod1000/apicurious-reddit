@@ -1,0 +1,535 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://oauth.reddit.com/r/worldnews?limit=15&type=t3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.10.1
+      Authorization:
+      - bearer zSn1nFwubLBi85pu2cHsSAUSlNo
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Ua-Compatible:
+      - IE=edge
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Expires:
+      - "-1"
+      Cache-Control:
+      - private, s-maxage=0, max-age=0, must-revalidate, max-age=0, must-revalidate
+      X-Ratelimit-Remaining:
+      - '599.0'
+      X-Ratelimit-Used:
+      - '1'
+      X-Ratelimit-Reset:
+      - '523'
+      X-Reddit-Tracking:
+      - https://pixel.redditmedia.com/pixel/of_destiny.png?v=EHbZ7vi6V%2FVYYhekHm046FMJLZg5FZ5gD%2F70WXQEchydW4QrIuwUnYpKlDmKsQZFv8jEdY76r8kEo5tOUUrBkzWrmFjIXdqr
+      X-Moose:
+      - majestic
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Content-Length:
+      - '8264'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Thu, 02 Feb 2017 21:31:17 GMT
+      Via:
+      - 1.1 varnish
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-den6023-DEN
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1486071077.120517,VS0,VE305
+      Vary:
+      - accept-encoding
+      Set-Cookie:
+      - loid=WNSb2IOXxyEqcR2GKP; Domain=reddit.com; Max-Age=63071999; Path=/;  secure
+      - loidcreated=1486071077000; Domain=reddit.com; Max-Age=63071999; Path=/;  secure
+      Server:
+      - snooserv
+    body:
+      encoding: ASCII-8BIT
+      string: '{"kind": "Listing", "data": {"modhash": null, "children": [{"kind":
+        "t3", "data": {"contest_mode": false, "banned_by": null, "domain": "self.worldnews",
+        "subreddit": "worldnews", "selftext_html": "&lt;!-- SC_OFF --&gt;&lt;div class=\"md\"&gt;&lt;p&gt;Here
+        at &lt;a href=\"/r/worldnews\"&gt;/r/worldnews&lt;/a&gt;, readers often report
+        certain sites to the moderators, asking them to ban them for their sensationalized
+        articles. Wanting to avoid an outright ban, moderators asked me to test an
+        idea: what is the effect of encouraging skepticism and fact-checking on frequently-unreliable
+        news sources? &lt;/p&gt;\n\n&lt;p&gt;We wanted to see how the &lt;a href=\"/r/worldnews\"&gt;r/worldnews&lt;/a&gt;
+        community would respond, and we also wondered what the effect might be on
+        reddit&amp;#39;s rankings. In a study of sticky comments from Nov 27 to Jan
+        20, here&amp;#39;s the TLDR:&lt;/p&gt;\n\n&lt;ul&gt;\n&lt;li&gt;&lt;p&gt;Within
+        discussions of tabloid submissions on &lt;a href=\"/r/worldnews\"&gt;r/worldnews&lt;/a&gt;,
+        &lt;strong&gt;encouraging fact-checking increases the incidence rate of comments
+        with links by 2x on average&lt;/strong&gt;, and encouraging fact-checking
+        + voting has a similar effect&lt;/p&gt;&lt;/li&gt;\n&lt;li&gt;&lt;p&gt;On
+        average, &lt;strong&gt;sticky comments encouraging fact-checking caused a
+        2x reduction in the reddit score of tabloid submissions after 24 hours&lt;/strong&gt;,
+        a statistically-significant effect that likely influenced rankings in the
+        subreddit. Where sticky comments included an added encouragement to vote,
+        I did not find a statistically-significant effect (though other models did)&lt;/p&gt;&lt;/li&gt;\n&lt;/ul&gt;\n\n&lt;p&gt;&lt;strong&gt;Can
+        Sticky Comments Encourage Fact-Checking?&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;With
+        over 15 million subscribers, &lt;a href=\"/r/worldnews\"&gt;r/worldnews&lt;/a&gt;
+        readers have a pretty huge capacity to fact-check stories. Moderators hoped
+        that if they asked, some redditors would help out. &lt;/p&gt;\n\n&lt;p&gt;For
+        this test, we A/B tested two different sticky comments\u2013messages that
+        we pinned to the top of a discussion. The first one encourages people to fact-check
+        the news link:&lt;/p&gt;\n\n&lt;p&gt;&lt;a href=\"http://imgur.com/E9oWq4v.png\"&gt;http://imgur.com/E9oWq4v.png&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;The
+        second encourages people to fact-check the article and consider downvoting
+        the link if they can&amp;#39;t find supporting evidence for its claims:&lt;/p&gt;\n\n&lt;p&gt;&lt;a
+        href=\"http://imgur.com/YbFVaXl.png\"&gt;http://imgur.com/YbFVaXl.png&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;Moderators
+        created a list of tabloid news sources (&lt;a href=\"https://cdn.rawgit.com/mitmedialab/CivilServant-Analysis/1fc969e5/reports/sticky_comment_experiment_results_worldnews.01.31.2017.html#how-we-tested-the-effect-of-our-sticky-comments\"&gt;details&lt;/a&gt;),
+        and from Nov 27 to Jan 20, we randomly assigned each new tabloid link to one
+        of three conditions: (1) no sticky comment, (1) a sticky comment encouraging
+        skepticism, (2) a sticky comment encouraging skepticism + voting. &lt;/p&gt;\n\n&lt;p&gt;In
+        a negative binomial model (&lt;a href=\"https://cdn.rawgit.com/mitmedialab/CivilServant-Analysis/1fc969e5/reports/sticky_comment_experiment_results_worldnews.01.31.2017.html#the-effect-of-sticky-comments-on-fact-checking-behavior\"&gt;details&lt;/a&gt;),
+        the note encouraging fact-checking increases the incidence rate of link-bearing
+        comments by 2.01x on average, and the note encouraging skepticism and downvotes
+        increases the incidence rate by 2.03x on average, among tabloid links on &lt;a
+        href=\"/r/worldnews\"&gt;r/worldnews&lt;/a&gt;. Both results are statistically
+        significant.&lt;/p&gt;\n\n&lt;p&gt;&lt;a href=\"http://imgur.com/EcVXAvS.png\"&gt;http://imgur.com/EcVXAvS.png&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;Can
+        Sticky Comments Influence How reddit&amp;#39;s Algorithms See Unreliable News?&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;While
+        we were confident that &lt;a href=\"/r/worldnews\"&gt;r/worldnews&lt;/a&gt;
+        readers would help out if moderators asked, we also worried that increasing
+        commenting activity around tabloid news might accidentally cause reddit&amp;#39;s
+        algorithms to notice and promote those tabloid links. If fact-checking increased
+        the popularity of unreliable news sources, the community might need to rethink
+        where to put their effort. That&amp;#39;s why moderators tested the sticky
+        comment that encourages readers to consider downvoting.&lt;/p&gt;\n\n&lt;p&gt;To
+        test the effects on reddit&amp;#39;s algorithms, I collected data on the score
+        of posts every four minutes. The platform doesn&amp;#39;t publish exactly
+        what goes into the score or exactly how its rankings work (I asked). However,
+        we &lt;em&gt;can&lt;/em&gt; predict the subreddit HOT page ranking of a post
+        from its age and score (&lt;a href=\"https://cdn.rawgit.com/mitmedialab/CivilServant-Analysis/1fc969e5/reports/sticky_comment_experiment_results_worldnews.01.31.2017.html#outcome-variables\"&gt;details&lt;/a&gt;).
+        Basically, if fact-checking had a large effect on an article&amp;#39;s score,
+        then it probably had an effect on an article&amp;#39;s ranking over time on
+        the subreddit page (and perhaps elsewhere too).&lt;/p&gt;\n\n&lt;p&gt;As reddit&amp;#39;s
+        algorithms currently stand, encouraging fact-checking caused tabloid submissions
+        to receive 49.1% (2.04x less) the score of submissions with no sticky comment,
+        after 24 hours, on average in &lt;a href=\"/r/worldnews\"&gt;r/worldnews&lt;/a&gt;.
+        The effect is statistically-significant. In this negative binomial model,
+        I failed to find an effect from the sticky comments that encouraged readers
+        to consider downvoting.&lt;/p&gt;\n\n&lt;p&gt;&lt;a href=\"http://imgur.com/oAWfFwF.png\"&gt;http://imgur.com/oAWfFwF.png&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;The
+        full picture is slightly more complex. Encouraging voting does have a small
+        positive effect on the growth rate of score over time, as I found in a longitudinal
+        analysis that predicted an article&amp;#39;s score at a moment in time. The
+        effect of these sticky comments on reddit&amp;#39;s algorithms may also have
+        changed after &lt;a href=\"https://www.reddit.com/r/announcements/comments/5gvd6b/scores_on_posts_are_about_to_start_going_up/\"&gt;reddit
+        adjusted its algorithms in early December&lt;/a&gt;. These charts focus on
+        the period after the adjustment (&lt;a href=\"https://cdn.rawgit.com/mitmedialab/CivilServant-Analysis/1fc969e5/reports/sticky_comment_experiment_results_worldnews.01.31.2017.html#the-effect-of-sticky-comments-on-reddits-algorithms\"&gt;details&lt;/a&gt;).&lt;/p&gt;\n\n&lt;p&gt;&lt;a
+        href=\"http://imgur.com/xOs9ZrE.png\"&gt;http://imgur.com/xOs9ZrE.png&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;Who
+        Commented?&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;Of 930 non-bot comments with
+        links that moderators allowed to remain, there were 737 unique commenters.
+        Out of these, 133 accounts made more than one comment with links. Many people
+        fact-checked their own submissions, with submitters posting 81 comments to
+        further information. Thanks everyone!&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;What
+        Don&amp;#39;t We Know?&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;This test looks
+        at outcomes within discussions rather than individual accounts, so I can&amp;#39;t
+        know if individual people were convinced to be more skeptical, or if the sticky
+        comments caused already-skeptical people to investigate and share. I also
+        don&amp;#39;t have any evidence on whether the fact-checking had an effect
+        on readers, although other research suggests it might [1] [2]. &lt;/p&gt;\n\n&lt;p&gt;Would
+        this work with other kinds of links, in other subreddits, or on other sites?
+        This study is limited to a specific community and list of sites. While I suspect
+        that many large online communities of readers would help fact-check links
+        if moderators asked, our findings about the reddit algorithm are much more
+        situated. &lt;/p&gt;\n\n&lt;p&gt;In fact, this study might be the first &amp;quot;AI
+        Nudge&amp;quot; to systematically test the effect of pro-social community
+        efforts to influence a algorithmic system out in the world. I&amp;#39;m grateful
+        to &lt;a href=\"/r/worldnews\"&gt;r/worldnews&lt;/a&gt; moderators for asking
+        me to help out!&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;Learn More About This
+        Study&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;a href=\"http://civilservant.io\"&gt;CivilServant&lt;/a&gt;
+        is my PhD project, software that supports communities to test the effects
+        of their own moderation practices. Public reddit comments from this conversations
+        may make it into my dissertation. In any publications, comments are anonymized
+        and obscured to prevent re-identification.&lt;/p&gt;\n\n&lt;p&gt;This study,
+        like all my research on reddit so far, was conducted independently of the
+        reddit platform, who had no role in the planning or the design of the experiment.&lt;/p&gt;\n\n&lt;ul&gt;\n&lt;li&gt;I
+        do not personally moderate &lt;a href=\"/r/worldnews\"&gt;r/worldnews&lt;/a&gt;.
+        If you have any questions about the moderation policies or why these sites
+        were chosen, please contact the moderators.&lt;/li&gt;\n&lt;li&gt;If you want
+        to design a new experiment to test a moderation idea, I would love to talk.
+        Send me a note on redditmail.&lt;/li&gt;\n&lt;li&gt;Read the experiment pre-analysis
+        plan at osf.io/hmq5m/&lt;/li&gt;\n&lt;li&gt;Read the full statistical analysis
+        of experiment results (&lt;a href=\"https://cdn.rawgit.com/mitmedialab/CivilServant-Analysis/1fc969e5/reports/sticky_comment_experiment_results_worldnews.01.31.2017.html\"&gt;details&lt;/a&gt;).
+        The &lt;a href=\"https://github.com/mitmedialab/CivilServant-Analysis/blob/master/reports/sticky_comment_experiment_results_worldnews.01.31.2017.Rmd\"&gt;code
+        that generated the report&lt;/a&gt; is on github.&lt;/li&gt;\n&lt;li&gt;I
+        designed this experiment together with &lt;a href=\"/r/worldnews\"&gt;r/worldnews&lt;/a&gt;
+        moderators, and it was approved by the &lt;a href=\"http://couhes.mit.edu/\"&gt;MIT
+        COUHES committee&lt;/a&gt;. Please reply to this post with any questions or
+        concerns, or &lt;a href=\"https://www.reddit.com/message/compose?to=natematias&amp;amp;subject=Questions%20about%20the%20r/worldnews%20experiment\"&gt;contact
+        natematias on redditmail&lt;/a&gt; directly.&lt;/li&gt;\n&lt;/ul&gt;\n\n&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;[1]
+        Stephan Lewandowsky, Ullrich K. H. Ecker, Colleen M. Seifert, Norbert Schwarz,
+        and John Cook. &lt;em&gt;Misinformation and Its Correction Continued Influence
+        and Successful Debiasing.&lt;/em&gt; Psychological Science in the Public Interest,
+        13(3):106-131, December 2012.&lt;/p&gt;\n\n&lt;p&gt;[2] Thomas Wood and Ethan
+        Porter. &lt;em&gt;The Elusive Backfire Effect: Mass Attitudes&amp;#39; Steadfast
+        Factual Adherence.&lt;/em&gt; SSRN Scholarly Paper ID 2819073, Social Science
+        Research Network,Rochester, NY, August 2016.&lt;/p&gt;\n&lt;/div&gt;&lt;!--
+        SC_ON --&gt;", "selftext": "Here at /r/worldnews, readers often report certain
+        sites to the moderators, asking them to ban them for their sensationalized
+        articles. Wanting to avoid an outright ban, moderators asked me to test an
+        idea: what is the effect of encouraging skepticism and fact-checking on frequently-unreliable
+        news sources? \n\nWe wanted to see how the r/worldnews community would respond,
+        and we also wondered what the effect might be on reddit''s rankings. In a
+        study of sticky comments from Nov 27 to Jan 20, here''s the TLDR:\n\n* Within
+        discussions of tabloid submissions on r/worldnews, **encouraging fact-checking
+        increases the incidence rate of comments with links by 2x on average**, and
+        encouraging fact-checking + voting has a similar effect\n\n* On average, **sticky
+        comments encouraging fact-checking caused a 2x reduction in the reddit score
+        of tabloid submissions after 24 hours**, a statistically-significant effect
+        that likely influenced rankings in the subreddit. Where sticky comments included
+        an added encouragement to vote, I did not find a statistically-significant
+        effect (though other models did)\n\n\n**Can Sticky Comments Encourage Fact-Checking?**\n\nWith
+        over 15 million subscribers, r/worldnews readers have a pretty huge capacity
+        to fact-check stories. Moderators hoped that if they asked, some redditors
+        would help out. \n\nFor this test, we A/B tested two different sticky comments\u2013messages
+        that we pinned to the top of a discussion. The first one encourages people
+        to fact-check the news link:\n\nhttp://imgur.com/E9oWq4v.png\n\nThe second
+        encourages people to fact-check the article and consider downvoting the link
+        if they can''t find supporting evidence for its claims:\n\nhttp://imgur.com/YbFVaXl.png\n\nModerators
+        created a list of tabloid news sources ([details](https://cdn.rawgit.com/mitmedialab/CivilServant-Analysis/1fc969e5/reports/sticky_comment_experiment_results_worldnews.01.31.2017.html#how-we-tested-the-effect-of-our-sticky-comments)),
+        and from Nov 27 to Jan 20, we randomly assigned each new tabloid link to one
+        of three conditions: (1) no sticky comment, (1) a sticky comment encouraging
+        skepticism, (2) a sticky comment encouraging skepticism + voting. \n\nIn a
+        negative binomial model ([details](https://cdn.rawgit.com/mitmedialab/CivilServant-Analysis/1fc969e5/reports/sticky_comment_experiment_results_worldnews.01.31.2017.html#the-effect-of-sticky-comments-on-fact-checking-behavior)),
+        the note encouraging fact-checking increases the incidence rate of link-bearing
+        comments by 2.01x on average, and the note encouraging skepticism and downvotes
+        increases the incidence rate by 2.03x on average, among tabloid links on r/worldnews.
+        Both results are statistically significant.\n\nhttp://imgur.com/EcVXAvS.png\n\n\n**Can
+        Sticky Comments Influence How reddit''s Algorithms See Unreliable News?**\n\nWhile
+        we were confident that r/worldnews readers would help out if moderators asked,
+        we also worried that increasing commenting activity around tabloid news might
+        accidentally cause reddit''s algorithms to notice and promote those tabloid
+        links. If fact-checking increased the popularity of unreliable news sources,
+        the community might need to rethink where to put their effort. That''s why
+        moderators tested the sticky comment that encourages readers to consider downvoting.\n\nTo
+        test the effects on reddit''s algorithms, I collected data on the score of
+        posts every four minutes. The platform doesn''t publish exactly what goes
+        into the score or exactly how its rankings work (I asked). However, we *can*
+        predict the subreddit HOT page ranking of a post from its age and score ([details](https://cdn.rawgit.com/mitmedialab/CivilServant-Analysis/1fc969e5/reports/sticky_comment_experiment_results_worldnews.01.31.2017.html#outcome-variables)).
+        Basically, if fact-checking had a large effect on an article''s score, then
+        it probably had an effect on an article''s ranking over time on the subreddit
+        page (and perhaps elsewhere too).\n\nAs reddit''s algorithms currently stand,
+        encouraging fact-checking caused tabloid submissions to receive 49.1% (2.04x
+        less) the score of submissions with no sticky comment, after 24 hours, on
+        average in r/worldnews. The effect is statistically-significant. In this negative
+        binomial model, I failed to find an effect from the sticky comments that encouraged
+        readers to consider downvoting.\n\nhttp://imgur.com/oAWfFwF.png\n\nThe full
+        picture is slightly more complex. Encouraging voting does have a small positive
+        effect on the growth rate of score over time, as I found in a longitudinal
+        analysis that predicted an article''s score at a moment in time. The effect
+        of these sticky comments on reddit''s algorithms may also have changed after
+        [reddit adjusted its algorithms in early December](https://www.reddit.com/r/announcements/comments/5gvd6b/scores_on_posts_are_about_to_start_going_up/).
+        These charts focus on the period after the adjustment ([details](https://cdn.rawgit.com/mitmedialab/CivilServant-Analysis/1fc969e5/reports/sticky_comment_experiment_results_worldnews.01.31.2017.html#the-effect-of-sticky-comments-on-reddits-algorithms)).\n\nhttp://imgur.com/xOs9ZrE.png\n\n**Who
+        Commented?**\n\nOf 930 non-bot comments with links that moderators allowed
+        to remain, there were 737 unique commenters. Out of these, 133 accounts made
+        more than one comment with links. Many people fact-checked their own submissions,
+        with submitters posting 81 comments to further information. Thanks everyone!\n\n**What
+        Don''t We Know?**\n\nThis test looks at outcomes within discussions rather
+        than individual accounts, so I can''t know if individual people were convinced
+        to be more skeptical, or if the sticky comments caused already-skeptical people
+        to investigate and share. I also don''t have any evidence on whether the fact-checking
+        had an effect on readers, although other research suggests it might [1] [2].
+        \n\nWould this work with other kinds of links, in other subreddits, or on
+        other sites? This study is limited to a specific community and list of sites.
+        While I suspect that many large online communities of readers would help fact-check
+        links if moderators asked, our findings about the reddit algorithm are much
+        more situated. \n\nIn fact, this study might be the first \"AI Nudge\" to
+        systematically test the effect of pro-social community efforts to influence
+        a algorithmic system out in the world. I''m grateful to r/worldnews moderators
+        for asking me to help out!\n\n**Learn More About This Study**\n\n[CivilServant](http://civilservant.io)
+        is my PhD project, software that supports communities to test the effects
+        of their own moderation practices. Public reddit comments from this conversations
+        may make it into my dissertation. In any publications, comments are anonymized
+        and obscured to prevent re-identification.\n\nThis study, like all my research
+        on reddit so far, was conducted independently of the reddit platform, who
+        had no role in the planning or the design of the experiment.\n\n* I do not
+        personally moderate r/worldnews. If you have any questions about the moderation
+        policies or why these sites were chosen, please contact the moderators.\n*
+        If you want to design a new experiment to test a moderation idea, I would
+        love to talk. Send me a note on redditmail.\n* Read the experiment pre-analysis
+        plan at osf.io/hmq5m/\n* Read the full statistical analysis of experiment
+        results ([details](https://cdn.rawgit.com/mitmedialab/CivilServant-Analysis/1fc969e5/reports/sticky_comment_experiment_results_worldnews.01.31.2017.html)).
+        The [code that generated the report](https://github.com/mitmedialab/CivilServant-Analysis/blob/master/reports/sticky_comment_experiment_results_worldnews.01.31.2017.Rmd)
+        is on github.\n* I designed this experiment together with r/worldnews moderators,
+        and it was approved by the [MIT COUHES committee](http://couhes.mit.edu/).
+        Please reply to this post with any questions or concerns, or [contact natematias
+        on redditmail](https://www.reddit.com/message/compose?to=natematias&amp;subject=Questions%20about%20the%20r/worldnews%20experiment)
+        directly.\n\n**References**\n\n[1] Stephan Lewandowsky, Ullrich K. H. Ecker,
+        Colleen M. Seifert, Norbert Schwarz, and John Cook. *Misinformation and Its
+        Correction Continued Influence and Successful Debiasing.* Psychological Science
+        in the Public Interest, 13(3):106-131, December 2012.\n\n[2] Thomas Wood and
+        Ethan Porter. *The Elusive Backfire Effect: Mass Attitudes'' Steadfast Factual
+        Adherence.* SSRN Scholarly Paper ID 2819073, Social Science Research Network,Rochester,
+        NY, August 2016.\n\n", "likes": null, "suggested_sort": null, "user_reports":
+        [], "secure_media": null, "saved": false, "id": "5rg40h", "gilded": 1, "secure_media_embed":
+        {}, "clicked": false, "report_reasons": null, "author": "natematias", "media":
+        null, "name": "t3_5rg40h", "score": 1244, "approved_by": null, "over_18":
+        false, "removal_reason": null, "hidden": false, "thumbnail": "", "subreddit_id":
+        "t5_2qh13", "edited": false, "link_flair_css_class": null, "author_flair_css_class":
+        null, "downs": 0, "mod_reports": [], "archived": false, "media_embed": {},
+        "is_self": true, "hide_score": false, "spoiler": false, "permalink": "/r/worldnews/comments/5rg40h/sticky_comments_increase_factchecking_and_cause/",
+        "locked": false, "stickied": true, "created": 1485992022.0, "url": "https://www.reddit.com/r/worldnews/comments/5rg40h/sticky_comments_increase_factchecking_and_cause/",
+        "author_flair_text": null, "quarantine": false, "title": "Sticky Comments
+        Increase Fact-Checking and Cause Tabloid News To Be Featured Less Prominently
+        on reddit", "created_utc": 1485963222.0, "link_flair_text": null, "distinguished":
+        null, "num_comments": 182, "visited": false, "num_reports": null, "ups": 1244}},
+        {"kind": "t3", "data": {"contest_mode": false, "banned_by": null, "domain":
+        "thelocal.dk", "subreddit": "worldnews", "selftext_html": null, "selftext":
+        "", "likes": null, "suggested_sort": null, "user_reports": [], "secure_media":
+        null, "saved": false, "id": "5rmn5r", "gilded": 1, "secure_media_embed": {},
+        "clicked": false, "report_reasons": null, "author": "madazzahatter", "media":
+        null, "name": "t3_5rmn5r", "score": 27942, "approved_by": null, "over_18":
+        false, "removal_reason": null, "hidden": false, "thumbnail": "", "subreddit_id":
+        "t5_2qh13", "edited": false, "link_flair_css_class": null, "author_flair_css_class":
+        null, "downs": 0, "mod_reports": [], "archived": false, "media_embed": {},
+        "is_self": false, "hide_score": false, "spoiler": false, "permalink": "/r/worldnews/comments/5rmn5r/danish_green_energy_giant_dong_said_on_thursday/",
+        "locked": false, "stickied": false, "created": 1486069680.0, "url": "http://www.thelocal.dk/20170202/denmarks-dong-energy-to-ditch-coal-by-2023",
+        "author_flair_text": null, "quarantine": false, "title": "Danish green energy
+        giant Dong said on Thursday it was pulling out of coal use, burning another
+        bridge to its fossil fuel past after ditching oil and gas. Dong is the biggest
+        wind power producer in Europe.", "created_utc": 1486040880.0, "link_flair_text":
+        null, "distinguished": null, "num_comments": 1843, "visited": false, "num_reports":
+        null, "ups": 27942}}, {"kind": "t3", "data": {"contest_mode": false, "banned_by":
+        null, "domain": "usatoday.com", "subreddit": "worldnews", "selftext_html":
+        null, "selftext": "", "likes": null, "suggested_sort": null, "user_reports":
+        [], "secure_media": null, "saved": false, "id": "5roev7", "gilded": 0, "secure_media_embed":
+        {}, "clicked": false, "report_reasons": null, "author": "kelvindegrees", "media":
+        null, "name": "t3_5roev7", "score": 2442, "approved_by": null, "over_18":
+        false, "removal_reason": null, "hidden": false, "thumbnail": "", "subreddit_id":
+        "t5_2qh13", "edited": false, "link_flair_css_class": "trump", "author_flair_css_class":
+        null, "downs": 0, "mod_reports": [], "archived": false, "media_embed": {},
+        "is_self": false, "hide_score": false, "spoiler": false, "permalink": "/r/worldnews/comments/5roev7/donald_trump_lifts_sanctions_on_russia_that_were/",
+        "locked": false, "stickied": false, "created": 1486088099.0, "url": "http://www.usatoday.com/story/news/2017/02/02/us-eases-some-economic-sanctions-against-russia/97399136/?utm_source=dlvr.it&amp;utm_medium=twitter",
+        "author_flair_text": null, "quarantine": false, "title": "Donald Trump lifts
+        sanctions on Russia that were imposed by Obama in response to cyber-security
+        concerns", "created_utc": 1486059299.0, "link_flair_text": "Eases", "distinguished":
+        null, "num_comments": 382, "visited": false, "num_reports": null, "ups": 2442}},
+        {"kind": "t3", "data": {"contest_mode": false, "banned_by": null, "domain":
+        "cbc.ca", "subreddit": "worldnews", "selftext_html": null, "selftext": "",
+        "likes": null, "suggested_sort": null, "user_reports": [], "secure_media":
+        null, "saved": false, "id": "5rmzga", "gilded": 0, "secure_media_embed": {},
+        "clicked": false, "report_reasons": null, "author": "AkitaBijin", "media":
+        null, "name": "t3_5rmzga", "score": 5440, "approved_by": null, "over_18":
+        false, "removal_reason": null, "hidden": false, "thumbnail": "", "subreddit_id":
+        "t5_2qh13", "edited": false, "link_flair_css_class": "ukrassia", "author_flair_css_class":
+        null, "downs": 0, "mod_reports": [], "archived": false, "media_embed": {},
+        "is_self": false, "hide_score": false, "spoiler": false, "permalink": "/r/worldnews/comments/5rmzga/its_so_much_worse_renewed_fighting_in_ukraine/",
+        "locked": false, "stickied": false, "created": 1486073749.0, "url": "http://www.cbc.ca/news/world/ukraine-russia-fighting-avdiivka-1.3962203",
+        "author_flair_text": null, "quarantine": false, "title": "''It''s so much
+        worse'': Renewed fighting in Ukraine pushes town to brink of humanitarian
+        catastrophe", "created_utc": 1486044949.0, "link_flair_text": "Ukraine/Russia",
+        "distinguished": null, "num_comments": 989, "visited": false, "num_reports":
+        null, "ups": 5440}}, {"kind": "t3", "data": {"contest_mode": false, "banned_by":
+        null, "domain": "independent.co.uk", "subreddit": "worldnews", "selftext_html":
+        null, "selftext": "", "likes": null, "suggested_sort": null, "user_reports":
+        [], "secure_media": null, "saved": false, "id": "5rmmji", "gilded": 0, "secure_media_embed":
+        {}, "clicked": false, "report_reasons": null, "author": "lvlehrad", "media":
+        null, "name": "t3_5rmmji", "score": 2897, "approved_by": null, "over_18":
+        false, "removal_reason": null, "hidden": false, "thumbnail": "", "subreddit_id":
+        "t5_2qh13", "edited": false, "link_flair_css_class": "trump", "author_flair_css_class":
+        null, "downs": 0, "mod_reports": [], "archived": false, "media_embed": {},
+        "is_self": false, "hide_score": false, "spoiler": false, "permalink": "/r/worldnews/comments/5rmmji/trump_iran_was_on_its_last_legs_and_ready_to/",
+        "locked": false, "stickied": false, "created": 1486069477.0, "url": "http://www.independent.co.uk/news/world/americas/donald-trump-tweet-iran-on-notice-after-ballistic-missile-test-a7559001.html",
+        "author_flair_text": null, "quarantine": false, "title": "Trump: Iran was
+        on its last legs and ready to collapse until the U.S. came along and gave
+        it a life-line in the form of the Iran Deal", "created_utc": 1486040677.0,
+        "link_flair_text": "Trump", "distinguished": null, "num_comments": 999, "visited":
+        false, "num_reports": null, "ups": 2897}}, {"kind": "t3", "data": {"contest_mode":
+        false, "banned_by": null, "domain": "bbc.com", "subreddit": "worldnews", "selftext_html":
+        null, "selftext": "", "likes": null, "suggested_sort": null, "user_reports":
+        [], "secure_media": null, "saved": false, "id": "5rnqed", "gilded": 0, "secure_media_embed":
+        {}, "clicked": false, "report_reasons": null, "author": "atswenson1", "media":
+        null, "name": "t3_5rnqed", "score": 1359, "approved_by": null, "over_18":
+        false, "removal_reason": null, "hidden": false, "thumbnail": "", "subreddit_id":
+        "t5_2qh13", "edited": false, "link_flair_css_class": null, "author_flair_css_class":
+        null, "downs": 0, "mod_reports": [], "archived": false, "media_embed": {},
+        "is_self": false, "hide_score": false, "spoiler": false, "permalink": "/r/worldnews/comments/5rnqed/russian_critic_vladimir_karamurza_suffers_sudden/",
+        "locked": false, "stickied": false, "created": 1486081657.0, "url": "http://www.bbc.com/news/world-europe-38844292",
+        "author_flair_text": null, "quarantine": false, "title": "Russian critic Vladimir
+        Kara-Murza suffers sudden organ failure", "created_utc": 1486052857.0, "link_flair_text":
+        null, "distinguished": null, "num_comments": 130, "visited": false, "num_reports":
+        null, "ups": 1359}}, {"kind": "t3", "data": {"contest_mode": false, "banned_by":
+        null, "domain": "turkeypurge.com", "subreddit": "worldnews", "selftext_html":
+        null, "selftext": "", "likes": null, "suggested_sort": null, "user_reports":
+        [], "secure_media": null, "saved": false, "id": "5rn781", "gilded": 0, "secure_media_embed":
+        {}, "clicked": false, "report_reasons": null, "author": "forever__newbie",
+        "media": null, "name": "t3_5rn781", "score": 1458, "approved_by": null, "over_18":
+        false, "removal_reason": null, "hidden": false, "thumbnail": "", "subreddit_id":
+        "t5_2qh13", "edited": false, "link_flair_css_class": "turkey", "author_flair_css_class":
+        null, "downs": 0, "mod_reports": [], "archived": false, "media_embed": {},
+        "is_self": false, "hide_score": false, "spoiler": false, "permalink": "/r/worldnews/comments/5rn781/turkey_bans_reporting_with_title_breaking_news/",
+        "locked": false, "stickied": false, "created": 1486076210.0, "url": "http://turkeypurge.com/breaking-reporting-breaking-news-banned-in-turkey",
+        "author_flair_text": null, "quarantine": false, "title": "Turkey Bans Reporting
+        with Title \"Breaking News\"", "created_utc": 1486047410.0, "link_flair_text":
+        "Turkey", "distinguished": null, "num_comments": 91, "visited": false, "num_reports":
+        null, "ups": 1458}}, {"kind": "t3", "data": {"contest_mode": false, "banned_by":
+        null, "domain": "businessinsider.com", "subreddit": "worldnews", "selftext_html":
+        null, "selftext": "", "likes": null, "suggested_sort": null, "user_reports":
+        [], "secure_media": null, "saved": false, "id": "5rl2w0", "gilded": 0, "secure_media_embed":
+        {}, "clicked": false, "report_reasons": null, "author": "davemeister", "media":
+        null, "name": "t3_5rl2w0", "score": 12524, "approved_by": null, "over_18":
+        false, "removal_reason": null, "hidden": false, "thumbnail": "", "subreddit_id":
+        "t5_2qh13", "edited": false, "link_flair_css_class": "trump", "author_flair_css_class":
+        null, "downs": 0, "mod_reports": [], "archived": false, "media_embed": {},
+        "is_self": false, "hide_score": false, "spoiler": false, "permalink": "/r/worldnews/comments/5rl2w0/us_military_officials_trumpordered_raid_in_yemen/",
+        "locked": false, "stickied": false, "created": 1486043285.0, "url": "http://www.businessinsider.com/us-military-officials-trump-ordered-raid-in-yemen-that-killed-us-navy-seal-was-approved-without-sufficient-intelligence-2017-2",
+        "author_flair_text": null, "quarantine": false, "title": "US military officials:
+        Trump-ordered raid in Yemen that killed US Navy SEAL was approved ''without
+        sufficient intelligence''", "created_utc": 1486014485.0, "link_flair_text":
+        "Trump", "distinguished": null, "num_comments": 2746, "visited": false, "num_reports":
+        null, "ups": 12524}}, {"kind": "t3", "data": {"contest_mode": false, "banned_by":
+        null, "domain": "the-japan-news.com", "subreddit": "worldnews", "selftext_html":
+        null, "selftext": "", "likes": null, "suggested_sort": null, "user_reports":
+        [], "secure_media": null, "saved": false, "id": "5rmt48", "gilded": 0, "secure_media_embed":
+        {}, "clicked": false, "report_reasons": null, "author": "madazzahatter", "media":
+        null, "name": "t3_5rmt48", "score": 1130, "approved_by": null, "over_18":
+        false, "removal_reason": null, "hidden": false, "thumbnail": "", "subreddit_id":
+        "t5_2qh13", "edited": false, "link_flair_css_class": "trump", "author_flair_css_class":
+        null, "downs": 0, "mod_reports": [], "archived": false, "media_embed": {},
+        "is_self": false, "hide_score": false, "spoiler": false, "permalink": "/r/worldnews/comments/5rmt48/shinzo_abe_intends_to_propose_during_a_meeting/",
+        "locked": false, "stickied": false, "created": 1486071656.0, "url": "http://the-japan-news.com/news/article/0003498622",
+        "author_flair_text": null, "quarantine": false, "title": "Shinzo Abe intends
+        to propose during a meeting with U.S. President Donald Trump on Feb. 10 a
+        bilateral economic cooperation plan, including the creation of a $450 billion
+        (\u00a551 trillion) market through railways and other infrastructure investments
+        in the US to generate 700,000 jobs.", "created_utc": 1486042856.0, "link_flair_text":
+        "Trump", "distinguished": null, "num_comments": 216, "visited": false, "num_reports":
+        null, "ups": 1130}}, {"kind": "t3", "data": {"contest_mode": false, "banned_by":
+        null, "domain": "euractiv.com", "subreddit": "worldnews", "selftext_html":
+        null, "selftext": "", "likes": null, "suggested_sort": null, "user_reports":
+        [], "secure_media": null, "saved": false, "id": "5roa2l", "gilded": 0, "secure_media_embed":
+        {}, "clicked": false, "report_reasons": null, "author": "Reilly616", "media":
+        null, "name": "t3_5roa2l", "score": 464, "approved_by": null, "over_18": false,
+        "removal_reason": null, "hidden": false, "thumbnail": "", "subreddit_id":
+        "t5_2qh13", "edited": false, "link_flair_css_class": "trump", "author_flair_css_class":
+        null, "downs": 0, "mod_reports": [], "archived": false, "media_embed": {},
+        "is_self": false, "hide_score": false, "spoiler": false, "permalink": "/r/worldnews/comments/5roa2l/germany_to_teach_trumps_inner_circle_how_eu_works/",
+        "locked": false, "stickied": false, "created": 1486086802.0, "url": "http://www.euractiv.com/section/global-europe/news/germany-to-teach-trumps-inner-circle-how-eu-works/",
+        "author_flair_text": null, "quarantine": false, "title": "Germany to teach
+        Trump''s inner circle how EU works: The inner circle of US President Donald
+        Trump has little knowledge about the European Union and Germany is having
+        to explain how the world\u2019s biggest trading bloc does business, the German
+        government\u2019s transatlantic coordinator said", "created_utc": 1486058002.0,
+        "link_flair_text": "Trump", "distinguished": null, "num_comments": 95, "visited":
+        false, "num_reports": null, "ups": 464}}, {"kind": "t3", "data": {"contest_mode":
+        false, "banned_by": null, "domain": "theguardian.com", "subreddit": "worldnews",
+        "selftext_html": null, "selftext": "", "likes": null, "suggested_sort": null,
+        "user_reports": [], "secure_media": null, "saved": false, "id": "5rjv9n",
+        "gilded": 0, "secure_media_embed": {}, "clicked": false, "report_reasons":
+        null, "author": "avatar1209", "media": null, "name": "t3_5rjv9n", "score":
+        47801, "approved_by": null, "over_18": false, "removal_reason": null, "hidden":
+        false, "thumbnail": "", "subreddit_id": "t5_2qh13", "edited": false, "link_flair_css_class":
+        "trump", "author_flair_css_class": null, "downs": 0, "mod_reports": [], "archived":
+        false, "media_embed": {}, "is_self": false, "hide_score": false, "spoiler":
+        false, "permalink": "/r/worldnews/comments/5rjv9n/trump_told_australian_prime_minister_refugee/",
+        "locked": false, "stickied": false, "created": 1486028302.0, "url": "https://www.theguardian.com/australia-news/2017/feb/02/trump-told-turnbull-refugee-agreement-was-the-worst-deal-ever-report",
+        "author_flair_text": null, "quarantine": false, "title": "Trump told Australian
+        Prime Minister refugee agreement was the ''worst deal ever'' and phone conversation
+        was \u2018worst call by far\u2019 he had had with world leaders.", "created_utc":
+        1485999502.0, "link_flair_text": "Trump", "distinguished": null, "num_comments":
+        11666, "visited": false, "num_reports": null, "ups": 47801}}, {"kind": "t3",
+        "data": {"contest_mode": false, "banned_by": null, "domain": "time.com", "subreddit":
+        "worldnews", "selftext_html": null, "selftext": "", "likes": null, "suggested_sort":
+        null, "user_reports": [], "secure_media": null, "saved": false, "id": "5rmy8p",
+        "gilded": 0, "secure_media_embed": {}, "clicked": false, "report_reasons":
+        null, "author": "popat2000", "media": null, "name": "t3_5rmy8p", "score":
+        582, "approved_by": null, "over_18": false, "removal_reason": null, "hidden":
+        false, "thumbnail": "", "subreddit_id": "t5_2qh13", "edited": false, "link_flair_css_class":
+        null, "author_flair_css_class": null, "downs": 0, "mod_reports": [], "archived":
+        false, "media_embed": {}, "is_self": false, "hide_score": false, "spoiler":
+        false, "permalink": "/r/worldnews/comments/5rmy8p/one_of_chinas_richest_billionaires_has/",
+        "locked": false, "stickied": false, "created": 1486073374.0, "url": "http://time.com/money/4656330/one-of-chinas-richest-billionaires-has-mysteriously-disappeared/?xid=newsletter-brief",
+        "author_flair_text": null, "quarantine": false, "title": "One of China''s
+        Richest Billionaires Has Mysteriously Disappeared", "created_utc": 1486044574.0,
+        "link_flair_text": null, "distinguished": null, "num_comments": 81, "visited":
+        false, "num_reports": null, "ups": 582}}, {"kind": "t3", "data": {"contest_mode":
+        false, "banned_by": null, "domain": "yahoo.com", "subreddit": "worldnews",
+        "selftext_html": null, "selftext": "", "likes": null, "suggested_sort": null,
+        "user_reports": [], "secure_media": null, "saved": false, "id": "5rnoiy",
+        "gilded": 0, "secure_media_embed": {}, "clicked": false, "report_reasons":
+        null, "author": "condcom", "media": null, "name": "t3_5rnoiy", "score": 372,
+        "approved_by": null, "over_18": false, "removal_reason": null, "hidden": false,
+        "thumbnail": "", "subreddit_id": "t5_2qh13", "edited": false, "link_flair_css_class":
+        "trump", "author_flair_css_class": null, "downs": 0, "mod_reports": [], "archived":
+        false, "media_embed": {}, "is_self": false, "hide_score": false, "spoiler":
+        false, "permalink": "/r/worldnews/comments/5rnoiy/the_eu_and_mexico_said_they_would_accelerate_free/",
+        "locked": false, "stickied": false, "created": 1486081155.0, "url": "https://www.yahoo.com/news/mexico-eu-speed-trade-talks-trump-threats-150749553.html",
+        "author_flair_text": null, "quarantine": false, "title": "The EU and Mexico
+        said they would accelerate free trade talks amid a wave of protectionist threats
+        by US President Donald Trump.", "created_utc": 1486052355.0, "link_flair_text":
+        "Trump", "distinguished": null, "num_comments": 70, "visited": false, "num_reports":
+        null, "ups": 372}}, {"kind": "t3", "data": {"contest_mode": false, "banned_by":
+        null, "domain": "cnn.com", "subreddit": "worldnews", "selftext_html": null,
+        "selftext": "", "likes": null, "suggested_sort": null, "user_reports": [],
+        "secure_media": null, "saved": false, "id": "5rnj8s", "gilded": 0, "secure_media_embed":
+        {}, "clicked": false, "report_reasons": null, "author": "TouchedByAnA-hole",
+        "media": null, "name": "t3_5rnj8s", "score": 348, "approved_by": null, "over_18":
+        false, "removal_reason": null, "hidden": false, "thumbnail": "", "subreddit_id":
+        "t5_2qh13", "edited": false, "link_flair_css_class": "trump", "author_flair_css_class":
+        null, "downs": 0, "mod_reports": [], "archived": false, "media_embed": {},
+        "is_self": false, "hide_score": false, "spoiler": false, "permalink": "/r/worldnews/comments/5rnj8s/iran_dismisses_ranting_trump_and_vows_more/",
+        "locked": false, "stickied": false, "created": 1486079692.0, "url": "http://www.cnn.com/2017/02/02/middleeast/iran-trump-inexperienced-missile-test-warning/index.html?adkey=bn",
+        "author_flair_text": null, "quarantine": false, "title": "Iran dismisses ''ranting''
+        Trump and vows more missile tests", "created_utc": 1486050892.0, "link_flair_text":
+        "Trump", "distinguished": null, "num_comments": 334, "visited": false, "num_reports":
+        null, "ups": 348}}, {"kind": "t3", "data": {"contest_mode": false, "banned_by":
+        null, "domain": "indianexpress.com", "subreddit": "worldnews", "selftext_html":
+        null, "selftext": "", "likes": null, "suggested_sort": null, "user_reports":
+        [], "secure_media": null, "saved": false, "id": "5rl02p", "gilded": 0, "secure_media_embed":
+        {}, "clicked": false, "report_reasons": null, "author": "vswar", "media":
+        null, "name": "t3_5rl02p", "score": 2429, "approved_by": null, "over_18":
+        false, "removal_reason": null, "hidden": false, "thumbnail": "", "subreddit_id":
+        "t5_2qh13", "edited": false, "link_flair_css_class": "trump", "author_flair_css_class":
+        null, "downs": 0, "mod_reports": [], "archived": false, "media_embed": {},
+        "is_self": false, "hide_score": false, "spoiler": false, "permalink": "/r/worldnews/comments/5rl02p/microsoft_amazon_and_expedia_to_support_lawsuit/",
+        "locked": false, "stickied": false, "created": 1486042209.0, "url": "http://indianexpress.com/article/technology/tech-news-technology/microsoft-amazon-and-expedia-to-support-washington-state-lawsuit-on-trump-immigration-order/",
+        "author_flair_text": null, "quarantine": false, "title": "Microsoft, Amazon
+        and Expedia to support lawsuit against Trump immigration order", "created_utc":
+        1486013409.0, "link_flair_text": "Trump", "distinguished": null, "num_comments":
+        392, "visited": false, "num_reports": null, "ups": 2429}}, {"kind": "t3",
+        "data": {"contest_mode": false, "banned_by": null, "domain": "reuters.com",
+        "subreddit": "worldnews", "selftext_html": null, "selftext": "", "likes":
+        null, "suggested_sort": null, "user_reports": [], "secure_media": null, "saved":
+        false, "id": "5rnfw7", "gilded": 0, "secure_media_embed": {}, "clicked": false,
+        "report_reasons": null, "author": "DoremusJessup", "media": null, "name":
+        "t3_5rnfw7", "score": 326, "approved_by": null, "over_18": false, "removal_reason":
+        null, "hidden": false, "thumbnail": "", "subreddit_id": "t5_2qh13", "edited":
+        false, "link_flair_css_class": null, "author_flair_css_class": null, "downs":
+        0, "mod_reports": [], "archived": false, "media_embed": {}, "is_self": false,
+        "hide_score": false, "spoiler": false, "permalink": "/r/worldnews/comments/5rnfw7/video_shows_french_reporter_dragged_off_as_he/",
+        "locked": false, "stickied": false, "created": 1486078726.0, "url": "http://www.reuters.com/article/us-france-election-le-pen-journalist-idUSKBN15H1QI?il=0",
+        "author_flair_text": null, "quarantine": false, "title": "Video shows French
+        reporter dragged off as he questions Le Pen", "created_utc": 1486049926.0,
+        "link_flair_text": null, "distinguished": null, "num_comments": 34, "visited":
+        false, "num_reports": null, "ups": 326}}], "after": "t3_5rnfw7", "before":
+        null}}'
+    http_version: 
+  recorded_at: Thu, 02 Feb 2017 21:31:17 GMT
+recorded_with: VCR 3.0.3

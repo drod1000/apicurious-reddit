@@ -48,4 +48,19 @@ describe RedditService do
       end
     end
   end
+
+  context ".get_single_subreddit" do
+    it "returns a single subreddit" do
+      VCR.use_cassette("single_subreddit") do
+        subreddit = RedditService.get_single_subreddit(User.first.token, "r/worldnews")
+
+        expect(subreddit).to be_an(Array)
+      end
+    end
+  end
+
+  context ".get_single_subreddit_post" do
+    xit "returns a single post" do
+    end
+  end
 end
