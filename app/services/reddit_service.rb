@@ -31,4 +31,11 @@ class RedditService
     JSON.parse(raw_data.body, symbolize_names: true)[:data][:children]
   end
 
+  def self.get_single_subreddit_post(token, permalink)
+    conn = Faraday.new
+    raw_data = conn.get "https://oauth.reddit.com/#{permalink}" do |req|
+      req.headers[:Authorization] = "bearer #{token}"
+    end
+    JSON.parse(raw_data.body, symbolize_names: true).first[:data][:children].first
+  end
 end
