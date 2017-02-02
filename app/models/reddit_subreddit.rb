@@ -11,7 +11,7 @@ class RedditSubreddit
 
   def self.get_user_subreddits(token)
     RedditService.get_user_subreddits(token).map do |subreddit|
-      RedditSubreddit.new(subreddit, token)
+      RedditSubreddit.new(token, subreddit)
     end
   end
 
