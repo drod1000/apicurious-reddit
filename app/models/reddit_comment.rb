@@ -1,7 +1,7 @@
 class RedditComment
   attr_reader :body
 
-  def initialize(attrs = {})
-    @body = attrs[:body]
+  def initialize(data)
+    @body = data[:body]
   end
 end
