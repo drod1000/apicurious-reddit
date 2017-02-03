@@ -1,41 +1,36 @@
 class RedditService
-  def self.get_user_info(token)
-    conn = Faraday.new
-    raw_data = conn.get 'https://oauth.reddit.com/api/v1/me/' do |req|
-      req.headers[:Authorization] = "bearer #{token}"
+
+  def self.raw_response(token, path)
+    conn = Faraday.new(:url => "https://oauth.reddit.com#{path}") do |faraday|
+      faraday.headers[:Authorization] = "bearer #{token}"
+      faraday.adapter  Faraday.default_adapter
     end
+    conn.get
+  end
+
+  def self.get_user_info(token)
+    raw_data = raw_response(token, "/api/v1/me/")
     JSON.parse(raw_data.body, symbolize_names: true)
   end
 
   def self.get_user_subreddits(token)
-    conn = Faraday.new
-    raw_data = conn.get 'https://oauth.reddit.com/subreddits/mine/subscriber' do |req|
-      req.headers[:Authorization] = "bearer #{token}"
-    end
+    raw_data = raw_response(token, "/subreddits/mine/subscriber")
     JSON.parse(raw_data.body, symbolize_names: true)[:data][:children]
   end
 
   def self.get_subreddit_rules(token, name)
-    conn = Faraday.new
-    raw_data = conn.get "https://oauth.reddit.com/r/#{name}/about/rules" do |req|
-      req.headers[:Authorization] = "bearer #{token}"
-    end
+    raw_data = raw_response(token, "/r/#{name}/about/rules")
     JSON.parse(raw_data.body, symbolize_names: true)[:rules]
   end
 
   def self.get_single_subreddit(token, permalink)
-    conn = Faraday.new
-    raw_data = conn.get "https://oauth.reddit.com/#{permalink}?type=t3&limit=15" do |req|
-      req.headers[:Authorization] = "bearer #{token}"
-    end
+    raw_data = raw_response(token, "/#{permalink}?type=t3&limit=15")
     JSON.parse(raw_data.body, symbolize_names: true)[:data][:children]
   end
 
   def self.get_single_subreddit_post(token, permalink)
-    conn = Faraday.new
-    raw_data = conn.get "https://oauth.reddit.com/#{permalink}" do |req|
-      req.headers[:Authorization] = "bearer #{token}"
-    end
+    raw_data = raw_response(token, "/#{permalink}")
     JSON.parse(raw_data.body, symbolize_names: true)
   end
+
 end
